@@ -1,10 +1,19 @@
-<h1>Rutas</h1>
-<ul>
-    <li><a routerLink="/index/index">index</a></li>
-    <li><a routerLink="/index/loteos">loteos</a></li>
-    <li><a routerLink="/index/contacto">contacto</a></li>
-    <li><a routerLink="/index/quienessomos">quienes somos</a></li>
-</ul>
+<header class="header">
+    <a href="#" class="logo">Logo</a>
 
+    <input type="checkbox" id="check">
+
+    <label for="check" class="icons">
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <i class="bx bx-x" id="close-icon"></i>
+    </label>
+
+    <nav class="navbar">
+        <a routerLink="/index/index" style="--i:0">Inicio</a>
+        <a routerLink="/index/loteos" style="--i:1">Loteos</a>
+        <a routerLink="/index/contacto" style="--i:2">Contacto</a>
+        <a routerLink="/index/quienessomos" style="--i:3">Quienes somos</a>
+    </nav>
+</header>
 
 <router-outlet></router-outlet>
