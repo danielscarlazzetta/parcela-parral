@@ -39,18 +39,18 @@ body {
     z-index: -1;
 }
 
-.header::after{
+.header::after {
     content: '';
     position: absolute;
     top: 0;
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255, .4), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent);
     transition: .5s;
 }
 
-.header:hover::after{
+.header:hover::after {
     left: 100%;
 }
 
@@ -69,7 +69,7 @@ body {
     margin-left: 2.5rem;
 }
 
-#check{
+#check {
     display: none;
 }
 
@@ -91,21 +91,22 @@ body {
 @media(max-width: 768px) {
     .slide img {
         position: center;
-        
+
     }
+
     .icons {
         display: inline-flex;
     }
 
-    #check:checked~.icons #menu-icon{
+    #check:checked~.icons #menu-icon {
         display: none;
     }
 
-    .icons #close-icon{
+    .icons #close-icon {
         display: none;
     }
 
-    #check:checked~.icons #close-icon{
+    #check:checked~.icons #close-icon {
         display: block;
     }
 
@@ -123,7 +124,7 @@ body {
         transition: .3s ease;
     }
 
-    #check:checked~.navbar{
+    #check:checked~.navbar {
         height: 17.7rem;
     }
 
@@ -136,8 +137,8 @@ body {
         opacity: 0;
         transition: .3s ease;
     }
-    
-    #check:checked~.navbar a{
+
+    #check:checked~.navbar a {
         transform: translateY(0);
         opacity: 1;
         transition-delay: calc(.15s *var(--i));
@@ -149,7 +150,7 @@ body {
 
 .container-loteo {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax( 400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     margin-top: 85px;
     padding-left: 130px;
     padding-right: 130px;
@@ -170,7 +171,8 @@ body {
     background-size: cover;
     background-position: center;
 }
-.card-loteo:hover{
+
+.card-loteo:hover {
     transform: translateY(-15px);
     transition: transform 1.9s ease;
     z-index: 1;
@@ -179,8 +181,8 @@ body {
 .map-loteo {
     position: static;
     width: 100%;
-    height: 200px; 
-    background-color: lightgray; 
+    height: 200px;
+    background-color: lightgray;
     border-radius: 20px;
 }
 
@@ -229,12 +231,16 @@ body {
 }
 
 @keyframes slide {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateX(0);
     }
+
     33.33% {
         transform: translateX(-100%);
     }
+
     66.66% {
         transform: translateX(-200%);
     }
@@ -242,8 +248,56 @@ body {
 
 .titulo {
     font-size: 6.2rem;
-    text-align: center; 
+    text-align: center;
     font-weight: 700;
     margin-top: 85px;
     color: #fff;
+}
+
+.container-text {
+    height: 100vh;
+    background-color: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* ! Quienes somos css */
+
+.container-parrafo {
+    width: 80%;
+    border-radius: 30px;
+    background-color: #f0f0f0;
+}
+
+.container-text p {
+    font-size: 23px;
+    margin: 30px;
+    line-height: 1.2;
+}
+
+.container-text h3 {
+    font-size: 32px;
+    margin: 20px;
+    line-height: 1.2;
+}
+
+@media(max-width: 768px) {
+    .container-parrafo {
+        width: 90%;
+    }
+    
+    .container-text p {
+        font-size: 18px;
+        margin: 30px;
+        line-height: 1.2;
+    }
+    
+    .container-text h3 {
+        font-size: 23px;
+        margin: 20px;
+        line-height: 1.2;
+    }
 }
