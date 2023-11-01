@@ -29,7 +29,8 @@ export class ProyectoLoteoComponent implements OnInit {
 
 
     // fetch('assets/json/el-bonito.json')
-    fetch('assets/json/santa-teresa.json')
+    // fetch('assets/json/santa-teresa.json')
+    fetch('assets/json/talhuenes.json')
       .then((response) => response.json())
       .then((data) => {
         const geoJsonLayer = L.geoJSON(data, {
