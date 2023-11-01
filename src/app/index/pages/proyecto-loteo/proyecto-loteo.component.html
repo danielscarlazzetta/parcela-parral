@@ -1,18 +1,18 @@
 <div class="contenedor">
-    <p class="contenedor-parrafo-loteos">Loteos: [Nombre loteo]</p>
+    <p class="contenedor-parrafo-loteos">Loteos {{ loteo[0].nombre}}</p>
 
     <div class="contenedor-card">
 
-        <div class="card-loteos-map card-30">
-            <h3>El bonito o cuatro esquinas</h3>
-            <p><i class="icono-check"></i> Propiedades desde $6.800.000</p>
-            <p><i class="icono-check"></i> Ubicacion 25km de Parral</p>
-            <p><i class="icono-check"></i> Sector camino Talhuenes</p>
-            <p><i class="icono-check"></i> Rol: Propio</p>
-            <p><i class="icono-check"></i> Propiedades saneadas</p>
-            <p><i class="icono-check"></i> Lista para transferir</p>
-            <p><i class="icono-check"></i> Pendiente suabe</p>
-            <p><i class="icono-check"></i> Cuenta con estacas en vertice</p>
+        <div class="card-loteos-map card-30" *ngIf="loteo.length > 0">
+            <h3>{{ loteo[0].nombre}}</h3>
+            <p><i class="icono-check"></i> Propiedades desde {{ loteo[0].precio}}</p>
+            <p><i class="icono-check"></i> Ubicacion : {{ loteo[0].distancia}}</p>
+            <p><i class="icono-check"></i> Sector {{ loteo[0].sector}}</p>
+            <p><i class="icono-check"></i> Rol: {{ loteo[0].rol}}</p>
+            <p><i class="icono-check"></i> Propiedades {{ loteo[0].propiedades}}</p>
+            <p><i class="icono-check"></i> Estado {{ loteo[0].transferencia}}</p>
+            <p><i class="icono-check"></i> Terreno: {{ loteo[0].pendiente}}</p>
+            <p><i class="icono-check"></i> Division: {{ loteo[0].divicion}}</p>
         </div>
         <div class="card-loteos-map card-70">
             <div id="map"><!-- style="height: 600px;" --></div>
