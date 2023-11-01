@@ -12,6 +12,7 @@ body {
     background: url('assets/img/banner1.jpg') no-repeat;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
 .header {
@@ -165,16 +166,15 @@ body {
     padding: 40px;
     box-shadow: 4px 4px 12px #112c07;
     border-radius: 15px;
-    transition: transform 1.9s ease;
-    /* background: url('assets/img/banner1.jpg') no-repeat; */
+    transition: transform 0.3s ease;
     background: #fff;
     background-size: cover;
     background-position: center;
 }
 
 .card-loteo:hover {
-    transform: translateY(-15px);
-    transition: transform 1.9s ease;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
     z-index: 1;
 }
 
