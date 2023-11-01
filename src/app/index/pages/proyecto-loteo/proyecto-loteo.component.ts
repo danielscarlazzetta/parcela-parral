@@ -18,7 +18,8 @@ export class ProyectoLoteoComponent implements OnInit {
 
 
   private initializeMap() {
-    this.map = L.map('map').setView([-35.9708855, -71.8814246], 30);
+    // this.map = L.map('map').setView([-35.9708855, -71.8814246], 30);
+    this.map = L.map('map').setView([-36.0039852, -71.8106413], 30);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       {
@@ -27,13 +28,14 @@ export class ProyectoLoteoComponent implements OnInit {
     ).addTo(this.map);
 
 
-    fetch('assets/json/map1.json')
+    // fetch('assets/json/el-bonito.json')
+    fetch('assets/json/santa-teresa.json')
       .then((response) => response.json())
       .then((data) => {
         const geoJsonLayer = L.geoJSON(data, {
           style: {
-            fillColor: 'red', 
-            color: 'blue',   
+            fillColor: 'green', 
+            color: 'red',   
             weight: 2       
           }
         }).addTo(this.map);

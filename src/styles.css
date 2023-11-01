@@ -308,8 +308,8 @@ body {
 /* ! Parcelas con mapas */
 
 #map {
-    height: 500px;
     width: 100%;
+    height: 600px;
     z-index: 1;
     border-radius: 30px;
 }
@@ -336,6 +336,7 @@ body {
 .contenedor-card{
     margin-top: 40px;
     display: flex;
+    height: 80%;
 }
 
 .card-loteos-map {
@@ -368,6 +369,10 @@ body {
     }
     .contenedor-card{
         display: grid;
+    }
+
+    #map {
+        height: 400px;
     }
 }
 
