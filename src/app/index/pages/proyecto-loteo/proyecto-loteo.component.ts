@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import * as L from 'leaflet';
 import { SharedServicesService } from '../../services/shared-services.service';
 import { LoteoDTO } from '../../interface/loteo.interface';
+import { NavigationEnd, NavigationStart, Router } from '@angular/router';
+
 
 
 @Component({
@@ -9,16 +11,39 @@ import { LoteoDTO } from '../../interface/loteo.interface';
   templateUrl: './proyecto-loteo.component.html',
   styleUrls: ['../../../../styles.css'],
 })
-export class ProyectoLoteoComponent implements OnInit {
+export class ProyectoLoteoComponent implements OnInit, OnDestroy {
 
   private map: L.Map | any = null;
 
-  constructor(private miVariableIndex: SharedServicesService) { }
+  //!
+  private scrollPosition: number | any;
+
+  constructor(private miVariableIndex: SharedServicesService, private router: Router) { 
+
+    //!
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationStart) {
+        this.scrollPosition = window.scrollY;
+      }
+      if (event instanceof NavigationEnd) {
+        window.scrollTo(0, 0); // Vuelve al principio de la página
+      }
+    });
+
+  }
 
   ngOnInit(): void {
     this.initializeMap();
     this.datosParcela();
-    console.log(this.miVariableIndex.getMiVariable())
+    this.gallery();
+    console.log(this.miVariableIndex.getMiVariable());
+    //!
+    window.scrollTo(0, this.scrollPosition);
+  }
+
+  ngOnDestroy() {
+    // Guarda la posición del scroll antes de navegar a otro componente
+    this.scrollPosition = window.scrollY;
   }
 
   private initializeMap() {
@@ -93,6 +118,29 @@ export class ProyectoLoteoComponent implements OnInit {
         }
       ];
     }
+  }
+
+
+  gallery() {
+    document.querySelectorAll('.image-container img').forEach(image => {
+      image.addEventListener('click', () => {
+        const popupImage = document.querySelector('.popup-image') as HTMLElement;
+        const popupImageImg : any = popupImage.querySelector('img') as HTMLImageElement;
+        popupImage.style.display = 'block';
+        popupImageImg.src = image.getAttribute('src');
+      });
+    });
+
+    const closeButton = document.querySelector('.popup-image span') as HTMLElement;
+    closeButton.addEventListener('click', () => {
+      const popupImage = document.querySelector('.popup-image') as HTMLElement;
+      popupImage.style.display = 'none';
+    });
+
+    // window.onload = function() {
+    //   window.scrollTo(0, 0);
+    // };
+    
   }
 
 }

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 @import '~leaflet/dist/leaflet.css';
+
 * {
     margin: 0;
     padding: 0;
@@ -250,7 +251,7 @@ body {
     font-size: 6.2rem;
     text-align: center;
     font-weight: 700;
-    margin-top: 85px;
+    margin-top: 100px;
     color: #fff;
 }
 
@@ -289,13 +290,13 @@ body {
     .container-parrafo {
         width: 90%;
     }
-    
+
     .container-text p {
         font-size: 18px;
         margin: 30px;
         line-height: 1.2;
     }
-    
+
     .container-text h3 {
         font-size: 23px;
         margin: 20px;
@@ -304,6 +305,22 @@ body {
 }
 
 
+
+
+.icono-check {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    background: url('assets/icons/check-mark-button-svgrepo-com.svg') center/contain no-repeat;
+    vertical-align: middle;
+}
+
+.contenedor-loteos-full{
+    display: column;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    scroll-snap-align: start;
+}
 
 /* ! Parcelas con mapas */
 
@@ -315,25 +332,28 @@ body {
 }
 
 .contenedor {
+    position: inherit;
     padding: 20px;
     text-align: center;
     margin-left: 5%;
     margin-right: 5%;
-    margin-top: 95px;
+    margin-top: 85px;
     width: 90%;
-    height: 87vh;
+    height: 100vh;
     flex-direction: column;
+    z-index: 1;
 }
 
-.contenedor-parrafo-loteos{
+.contenedor-parrafo-loteos {
     font-size: 60px;
     margin: 20px;
+    margin-top: 60px;
     line-height: 1.2;
     font-weight: bold;
     color: white;
 }
 
-.contenedor-card{
+.contenedor-card {
     margin-top: 40px;
     display: flex;
     height: 80%;
@@ -364,10 +384,13 @@ body {
         padding: 10px;
         flex-direction: column;
     }
-    .card-30, .card-70 {
+
+    .card-30,
+    .card-70 {
         width: 90%;
     }
-    .contenedor-card{
+
+    .contenedor-card {
         display: grid;
     }
 
@@ -376,10 +399,91 @@ body {
     }
 }
 
-.icono-check {
-    width: 1em;
-    height: 1em;
-    display: inline-block;
-    background: url('assets/icons/check-mark-button-svgrepo-com.svg') center/contain no-repeat; 
-    vertical-align: middle;
-  }
+
+/* ! Galeria de imagenes */
+
+
+.container-img {
+    margin-top: 85px;
+    position: relative;
+    min-height: 100vh;
+    background: #ddd;
+}
+
+.container-img h2 {
+    margin-top: 85px;
+    font-size: 40px;
+    font-weight: normal;
+    padding: 15px;
+    color: #2c5f15;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.container-img .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.container-img .image-container .image {
+    height: 250px;
+    width: 350px;
+    border: 10px solid #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.container-img .image-container .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .2 linear;
+}
+
+.container-img .image-container .image:hover img {
+    transform: scale(1.1);
+}
+
+.container-img .popup-image{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.container-img .popup-image span{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 60px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.container-img .popup-image img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 5px solid #fff;
+    border-radius: 15px;
+    width: 750px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px){
+
+    .container-img .popup-image img{
+        width: 95%;
+    }
+}
