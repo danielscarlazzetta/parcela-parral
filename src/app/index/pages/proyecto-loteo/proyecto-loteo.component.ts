@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as L from 'leaflet';
+import { SharedServicesService } from '../../services/shared-services.service';
 
 
 @Component({
@@ -11,33 +12,28 @@ export class ProyectoLoteoComponent implements OnInit {
 
   private map: L.Map | any = null;
 
+
+  constructor(private miVariableIndex : SharedServicesService){}
+
   ngOnInit(): void {
     this.initializeMap();
+    console.log(this.miVariableIndex.getMiVariable())
   }
 
-
-
   private initializeMap() {
-    // this.map = L.map('map').setView([-35.9708855, -71.8814246], 30);
-    this.map = L.map('map').setView([-36.0039852, -71.8106413], 30);
+    this.map = L.map('map').setView([-36.1431100, -71.8260500], 30);
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-      {
-        // attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      }
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
     ).addTo(this.map);
 
-
-    // fetch('assets/json/el-bonito.json')
-    // fetch('assets/json/santa-teresa.json')
-    fetch('assets/json/talhuenes.json')
+    fetch(this.miVariableIndex.getMiVariable())
       .then((response) => response.json())
       .then((data) => {
         const geoJsonLayer = L.geoJSON(data, {
           style: {
             fillColor: 'green', 
             color: 'red',   
-            weight: 2       
+            weight: 1       
           }
         }).addTo(this.map);
 
