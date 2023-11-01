@@ -1,0 +1,795 @@
+{
+    "type": "FeatureCollection",
+    "name": "Sin título",
+    "crs": {
+        "type": "name",
+        "properties": {
+            "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+        }
+    },
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "el bonito"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -71.880897422531604,
+                            -35.972909987061399
+                        ],
+                        [
+                            -71.881105488468705,
+                            -35.9736761163959
+                        ],
+                        [
+                            -71.878503766007896,
+                            -35.975155847878703
+                        ],
+                        [
+                            -71.878166668444806,
+                            -35.974640085462198
+                        ],
+                        [
+                            -71.877990922858601,
+                            -35.974263111919001
+                        ],
+                        [
+                            -71.877844935382399,
+                            -35.973944899209798
+                        ],
+                        [
+                            -71.877025240669596,
+                            -35.9731749142504
+                        ],
+                        [
+                            -71.876055138505194,
+                            -35.971429385735597
+                        ],
+                        [
+                            -71.883589081128505,
+                            -35.9682383698999
+                        ],
+                        [
+                            -71.885355479549304,
+                            -35.970529356927997
+                        ],
+                        [
+                            -71.880897422531604,
+                            -35.972909987061399
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.882269573309699,
+                        -35.968801545713902
+                    ],
+                    [
+                        -71.883047848526502,
+                        -35.971766693628403
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.881035307326499,
+                        -35.969355293712098
+                    ],
+                    [
+                        -71.880614301817701,
+                        -35.973079902412302
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.879560773584004,
+                        -35.969965484126199
+                    ],
+                    [
+                        -71.879734809637398,
+                        -35.973516961049199
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.878131472548205,
+                        -35.970559598844702
+                    ],
+                    [
+                        -71.879086895155993,
+                        -35.974815246527399
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.880898905033007,
+                        -35.972920124000403
+                    ],
+                    [
+                        -71.880017407567195,
+                        -35.973438465909801
+                    ],
+                    [
+                        -71.878864967553895,
+                        -35.973770265154201
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.885122976645704,
+                        -35.970223111905497
+                    ],
+                    [
+                        -71.882937595948107,
+                        -35.971295969926501
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.884445149570197,
+                        -35.969354743609003
+                    ],
+                    [
+                        -71.882635071953402,
+                        -35.970168082926797
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.884898577221307,
+                        -35.9699463710541
+                    ],
+                    [
+                        -71.882838171926807,
+                        -35.970961400796497
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.884682630342695,
+                        -35.969656022249197
+                    ],
+                    [
+                        -71.882730263462605,
+                        -35.970553889390999
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.884235680760995,
+                        -35.969068047255398
+                    ],
+                    [
+                        -71.882543796750397,
+                        -35.969843907919199
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.883994576632105,
+                        -35.968775734885597
+                    ],
+                    [
+                        -71.882445795439807,
+                        -35.969480477719301
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.883783825621506,
+                        -35.968499749046501
+                    ],
+                    [
+                        -71.882357683530302,
+                        -35.969162836417397
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.882346896174894,
+                        -35.969113808834202
+                    ],
+                    [
+                        -71.8809946652392,
+                        -35.969773111389898
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.882430904437697,
+                        -35.969450513667901
+                    ],
+                    [
+                        -71.880946798645198,
+                        -35.970173155882797
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.882516828692502,
+                        -35.969781507364601
+                    ],
+                    [
+                        -71.880896145089494,
+                        -35.970610664003999
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.882620075509706,
+                        -35.970148421310199
+                    ],
+                    [
+                        -71.880842197886096,
+                        -35.971087397573598
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.882720101595993,
+                        -35.970530140503499
+                    ],
+                    [
+                        -71.880784747426802,
+                        -35.971639617897203
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.882820902823298,
+                        -35.970936777984797
+                    ],
+                    [
+                        -71.880720221559699,
+                        -35.972199836371601
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.882937229616005,
+                        -35.971363313826402
+                    ],
+                    [
+                        -71.880673514996502,
+                        -35.972626042064299
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.880654296054203,
+                        -35.972732053405103
+                    ],
+                    [
+                        -71.878779237637602,
+                        -35.973447335671104
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.880700630420193,
+                        -35.972328128680502
+                    ],
+                    [
+                        -71.878696076667794,
+                        -35.973051081179101
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.880765922799796,
+                        -35.971755552516697
+                    ],
+                    [
+                        -71.878567108533503,
+                        -35.972505050783703
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.880831369863998,
+                        -35.971157460279997
+                    ],
+                    [
+                        -71.8784147795146,
+                        -35.971824631897803
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.880890287005599,
+                        -35.970630210116198
+                    ],
+                    [
+                        -71.878307768412995,
+                        -35.9714079590456
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.880944388230503,
+                        -35.9701788118198
+                    ],
+                    [
+                        -71.878266430051994,
+                        -35.971165509104701
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.880986706611793,
+                        -35.969774279932203
+                    ],
+                    [
+                        -71.878191089925593,
+                        -35.970863067355502
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.880331774012603,
+                        -35.973254082671197
+                    ],
+                    [
+                        -71.880522609787903,
+                        -35.974008339280999
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.879734011430003,
+                        -35.973519039766003
+                    ],
+                    [
+                        -71.879949416201995,
+                        -35.974325216048598
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.879009368529793,
+                        -35.9744398459219
+                    ],
+                    [
+                        -71.878243240072706,
+                        -35.974757614175402
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.878928124642897,
+                        -35.974095798446001
+                    ],
+                    [
+                        -71.878081946779801,
+                        -35.974446760493201
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.878866357068702,
+                        -35.973835592105999
+                    ],
+                    [
+                        -71.877954809635497,
+                        -35.974176388320302
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.878814437629302,
+                        -35.973609959685596
+                    ],
+                    [
+                        -71.877694985894493,
+                        -35.973804436767303
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.878758167676594,
+                        -35.9733513077773
+                    ],
+                    [
+                        -71.877384477192294,
+                        -35.973514376262699
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.878649568783601,
+                        -35.972896008541198
+                    ],
+                    [
+                        -71.876977129756,
+                        -35.973092822344398
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.878526517860294,
+                        -35.972323206550001
+                    ],
+                    [
+                        -71.876729322368902,
+                        -35.9726502437695
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.878190259177202,
+                        -35.970859867472697
+                    ],
+                    [
+                        -71.8762116377561,
+                        -35.971687469644202
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.878265383030595,
+                        -35.9711978190129
+                    ],
+                    [
+                        -71.876364518290004,
+                        -35.971946647196198
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Ruta sin título"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.8783730976415,
+                        -35.971647908341502
+                    ],
+                    [
+                        -71.876525009474193,
+                        -35.972262007134603
+                    ]
+                ]
+            }
+        }
+    ]
+}
