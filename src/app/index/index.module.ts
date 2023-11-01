@@ -17,7 +17,7 @@ import { FormularioContactoComponent } from './pages/formulario-contacto/formula
   ],
   imports: [
     CommonModule,
-    IndexRoutingModule
+    IndexRoutingModule,
   ]
 })
 export class IndexModule { }

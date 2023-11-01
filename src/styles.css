@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
-
+@import '~leaflet/dist/leaflet.css';
 * {
     margin: 0;
     padding: 0;
@@ -260,6 +260,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #2c5f15;
 }
 
 
@@ -301,3 +302,79 @@ body {
         line-height: 1.2;
     }
 }
+
+
+
+/* ! Parcelas con mapas */
+
+#map {
+    height: 500px;
+    width: 100%;
+    z-index: 1;
+    border-radius: 30px;
+}
+
+.contenedor {
+    padding: 20px;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 95px;
+    width: 90%;
+    height: 87vh;
+    flex-direction: column;
+}
+
+.contenedor-parrafo-loteos{
+    font-size: 60px;
+    margin: 20px;
+    line-height: 1.2;
+    font-weight: bold;
+    color: white;
+}
+
+.contenedor-card{
+    margin-top: 40px;
+    display: flex;
+}
+
+.card-loteos-map {
+    margin: 20px;
+    border-radius: 30px;
+}
+
+.card-30 {
+    width: 30%;
+    text-align: left;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    color: #2c5f15;
+}
+
+.card-70 {
+    width: 70%;
+}
+
+
+@media (max-width: 768px) {
+    .contenedor {
+        padding: 10px;
+        flex-direction: column;
+    }
+    .card-30, .card-70 {
+        width: 90%;
+    }
+    .contenedor-card{
+        display: grid;
+    }
+}
+
+.icono-check {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    background: url('assets/icons/check-mark-button-svgrepo-com.svg') center/contain no-repeat; 
+    vertical-align: middle;
+  }
