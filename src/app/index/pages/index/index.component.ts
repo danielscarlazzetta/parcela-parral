@@ -4,7 +4,6 @@ import { SharedServicesService } from '../../services/shared-services.service';
 @Component({
   selector: 'app-index',
   templateUrl: './index.component.html',
-  styleUrls: ['../../../../styles.css'],
   
 })
 export class IndexComponent {

@@ -9,7 +9,6 @@ import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 @Component({
   selector: 'app-proyecto-loteo',
   templateUrl: './proyecto-loteo.component.html',
-  styleUrls: ['../../../../styles.css'],
 })
 export class ProyectoLoteoComponent implements OnInit, OnDestroy {
 
