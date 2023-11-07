@@ -1,3 +1,4 @@
+/*
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 @import '~leaflet/dist/leaflet.css';
 
@@ -26,7 +27,6 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 2;
-    /* z-index: 100%; */
 }
 
 .header::before {
@@ -57,14 +57,13 @@ body {
 }
 
 .logo {
-    font-size: 3rem;
+    font-size: 2rem;
     color: #fff;
     text-decoration: none;
-    font-weight: 700;
 }
 
 .navbar a {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     color: #fff;
     text-decoration: none;
     font-weight: 500;
@@ -90,77 +89,6 @@ body {
     }
 }
 
-@media(max-width: 768px) {
-    .slide img {
-        position: center;
-
-    }
-
-    .icons {
-        display: inline-flex;
-    }
-
-    #check:checked~.icons #menu-icon {
-        display: none;
-    }
-
-    .icons #close-icon {
-        display: none;
-    }
-
-    #check:checked~.icons #close-icon {
-        display: block;
-    }
-
-    .navbar {
-        position: absolute;
-        z-index: 2;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        height: 0;
-        background: rgba(0, 0, 0, .6);
-        backdrop-filter: blur(6px);
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
-        overflow: hidden;
-        transition: .3s ease;
-    }
-
-    #check:checked~.navbar {
-        height: 17.7rem;
-    }
-
-    .navbar a {
-        display: block;
-        font-size: 2rem;
-        margin: 1.5rem 0;
-        text-align: center;
-        transform: translateY(-50px);
-        opacity: 0;
-        transition: .3s ease;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
-
-    #check:checked~.navbar a {
-        transform: translateY(0);
-        opacity: 1;
-        transition-delay: calc(.15s *var(--i));
-    }
-
-}
-
-
-/* ! Card Container */
-
-.container-loteo {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    margin-top: 85px;
-    padding-left: 130px;
-    padding-right: 130px;
-    color: #2c5f15;
-}
-
 .card-loteo {
     width: 400px;
     height: 600px;
@@ -181,6 +109,13 @@ body {
     z-index: 1;
 }
 
+.map-loteo {
+    position: static;
+    width: 100%;
+    height: 200px;
+    background-color: lightgray;
+    border-radius: 20px;
+}
 
 .card-link {
     text-decoration: none;
@@ -188,8 +123,6 @@ body {
     width: calc(33.33% - 20px);
     margin-bottom: 40px;
 }
-
-/* ! carrusel de imagenes */
 
 .slider {
     display: flex;
@@ -215,7 +148,6 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* background: rgba(0, 0, 0, 0.9); */
     color: white;
     padding: 10px 20px;
     font-size: 3.7rem;
@@ -261,7 +193,6 @@ body {
 
 
 
-/* ! Quienes somos css */
 
 .container-parrafo {
     width: 80%;
@@ -281,27 +212,6 @@ body {
     line-height: 1.2;
 }
 
-@media(max-width: 768px) {
-    .container-parrafo {
-        width: 90%;
-    }
-
-    .container-text p {
-        font-size: 18px;
-        margin: 30px;
-        line-height: 1.2;
-    }
-
-    .container-text h3 {
-        font-size: 23px;
-        margin: 20px;
-        line-height: 1.2;
-    }
-}
-
-
-
-
 .icono-check {
     width: 1em;
     height: 1em;
@@ -317,7 +227,6 @@ body {
     scroll-snap-align: start;
 }
 
-/* ! Parcelas con mapas */
 
 #map {
     width: 100%;
@@ -327,26 +236,14 @@ body {
 }
 
 .contenedor {
-    position: inherit;
-    padding: 20px;
-    text-align: center;
-    margin-left: 5%;
-    margin-right: 5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     margin-top: 85px;
-    width: 90%;
-    height: 100vh;
-    flex-direction: column;
-    z-index: 1;
+    padding-left: 130px;
+    padding-right: 130px;
+    color: #2c5f15;
 }
 
-.contenedor-parrafo-loteos {
-    font-size: 60px;
-    margin: 20px;
-    margin-top: 60px;
-    line-height: 1.2;
-    font-weight: bold;
-    color: white;
-}
 
 .contenedor-card {
     margin-top: 40px;
@@ -373,29 +270,6 @@ body {
     width: 70%;
 }
 
-
-@media (max-width: 768px) {
-    .contenedor {
-        padding: 10px;
-        flex-direction: column;
-    }
-
-    .card-30,
-    .card-70 {
-        width: 90%;
-    }
-
-    .contenedor-card {
-        display: grid;
-    }
-
-    #map {
-        height: 400px;
-    }
-}
-
-
-/* ! Galeria de imagenes */
 
 
 .container-img {
@@ -478,7 +352,95 @@ body {
 
 @media (max-width: 768px){
 
+    .contenedor {
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .card-30,
+    .card-70 {
+        width: 90%;
+    }
+
+    .contenedor-card {
+        display: grid;
+    }
+
+    #map {
+        height: 400px;
+    }
+
+    .container-parrafo {
+        width: 90%;
+    }
+
+    .container-text p {
+        font-size: 18px;
+        margin: 30px;
+        line-height: 1.2;
+    }
+
+    .container-text h3 {
+        font-size: 23px;
+        margin: 20px;
+        line-height: 1.2;
+    }
+    .slide img {
+        position: center;
+
+    }
+
+    .icons {
+        display: inline-flex;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    .icons #close-icon {
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        z-index: 2;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: rgba(0, 0, 0, .1);
+        backdrop-filter: blur(6px);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        overflow: hidden;
+        transition: .3s ease;
+    }
+
+    #check:checked~.navbar {
+        height: 17.7rem;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+        transform: translateY(-50px);
+        opacity: 0;
+        transition: .3s ease;
+    }
+
+    #check:checked~.navbar a {
+        transform: translateY(0);
+        opacity: 1;
+        transition-delay: calc(.15s *var(--i));
+    }
     .container-img .popup-image img{
         width: 95%;
     }
 }
+*/
