@@ -163,7 +163,7 @@ body {
 
 .card-loteo {
     width: 400px;
-    height: 600px;
+    height: 400px;
     margin: 10px;
     border: 1px solid #ccc;
     padding: 40px;
@@ -201,6 +201,7 @@ body {
     flex: 0 0 100%;
     text-align: center;
     position: relative;
+    /* animation: slide 3s infinite; */
 }
 
 .slide img {
@@ -210,12 +211,12 @@ body {
     filter: brightness(0.9) saturate(0.7);
 }
 
+
 .slide h1 {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* background: rgba(0, 0, 0, 0.9); */
     color: white;
     padding: 10px 20px;
     font-size: 3.7rem;
@@ -223,7 +224,7 @@ body {
 }
 
 .slider .slide {
-    animation: slide 9s infinite;
+    animation: slide 12s infinite;
 }
 
 @keyframes slide {
@@ -246,12 +247,11 @@ body {
     font-size: 6.2rem;
     text-align: center;
     font-weight: 700;
-    margin-top: 100px;
     color: #fff;
 }
 
 .container-text {
-    height: 100vh;
+    /* height: 100vh; */
     background-color: none;
     display: flex;
     justify-content: center;
@@ -267,6 +267,7 @@ body {
     width: 80%;
     border-radius: 30px;
     background-color: #f0f0f0;
+    box-shadow: 4px 4px 12px #112c07;
 }
 
 .container-text p {

@@ -18,6 +18,8 @@ export class ProyectoLoteoComponent implements OnInit, OnDestroy {
   //!
   private scrollPosition: number | any;
 
+  
+
   constructor(private miVariableIndex: SharedServicesService, private router: Router) { 
 
     //!
@@ -29,7 +31,7 @@ export class ProyectoLoteoComponent implements OnInit, OnDestroy {
         window.scrollTo(0, 0); // Vuelve al principio de la página
       }
     });
-
+    //nuevo
   }
 
   ngOnInit(): void {
@@ -70,8 +72,12 @@ export class ProyectoLoteoComponent implements OnInit, OnDestroy {
   loteo: LoteoDTO[] = [];
 
   private datosParcela() {
+
     if (this.miVariableIndex.getMiVariable() === 'assets/json/el-bonito.json') {
+      const localstorageFunciona = localStorage.getItem(this.miVariableIndex.getMiVariable())
       console.log('todo pasando 1');
+      console.log('caca ' +  localstorageFunciona)
+
       this.loteo = [
         {
           nombre: 'El bonito',
@@ -85,6 +91,7 @@ export class ProyectoLoteoComponent implements OnInit, OnDestroy {
           divicion: 'Cuenta con estacas'
         }
       ];
+      
     }
     if (this.miVariableIndex.getMiVariable() === 'assets/json/santa-teresa.json') {
       console.log('todo pasando 2');
@@ -101,6 +108,7 @@ export class ProyectoLoteoComponent implements OnInit, OnDestroy {
           divicion: 'Cuenta con estacas'
         }
       ];
+      localStorage.getItem(this.miVariableIndex.getMiVariable())
     }
     if (this.miVariableIndex.getMiVariable() === 'assets/json/talhuenes.json') {
       console.log('todo pasando 3');
@@ -117,6 +125,7 @@ export class ProyectoLoteoComponent implements OnInit, OnDestroy {
           divicion: 'Cuenta con estacas'
         }
       ];
+      localStorage.getItem(this.miVariableIndex.getMiVariable())
     }
   }
 

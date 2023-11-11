@@ -6,6 +6,7 @@ import { IndexComponent } from './pages/index/index.component';
 import { ProyectoLoteoComponent } from './pages/proyecto-loteo/proyecto-loteo.component';
 import { QuienessomosComponent } from './pages/quienessomos/quienessomos.component';
 import { FormularioContactoComponent } from './pages/formulario-contacto/formulario-contacto.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { FormularioContactoComponent } from './pages/formulario-contacto/formula
   imports: [
     CommonModule,
     IndexRoutingModule,
+    FormsModule,
   ]
 })
 export class IndexModule { }
