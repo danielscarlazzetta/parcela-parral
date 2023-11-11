@@ -3,6 +3,7 @@ import * as L from 'leaflet';
 import { SharedServicesService } from '../../services/shared-services.service';
 import { LoteoDTO } from '../../interface/loteo.interface';
 import { NavigationEnd, NavigationStart, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 
 
@@ -17,13 +18,12 @@ export class ProyectoLoteoComponent implements OnInit, OnDestroy {
 
   //!
   private scrollPosition: number | any;
+  private subscription: Subscription;
 
   
 
-  constructor(private miVariableIndex: SharedServicesService, private router: Router) { 
-
-    //!
-    this.router.events.subscribe(event => {
+  constructor(private miVariableIndex: SharedServicesService, private router: Router) {
+    this.subscription = this.router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
         this.scrollPosition = window.scrollY;
       }
@@ -31,14 +31,18 @@ export class ProyectoLoteoComponent implements OnInit, OnDestroy {
         window.scrollTo(0, 0); // Vuelve al principio de la página
       }
     });
-    //nuevo
   }
 
   ngOnInit(): void {
     this.initializeMap();
     this.datosParcela();
-    this.gallery();
-    console.log(this.miVariableIndex.getMiVariable());
+    // Obtén el valor de miVariable desde localStorage
+    const miVariable = localStorage.getItem('miVariable');
+    console.log(miVariable);
+    // Si existe el valor en localStorage, actualiza miVariableIndex
+    if (miVariable) {
+      this.miVariableIndex.setMiVariable(miVariable);
+    }
     //!
     window.scrollTo(0, this.scrollPosition);
   }
@@ -46,6 +50,7 @@ export class ProyectoLoteoComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     // Guarda la posición del scroll antes de navegar a otro componente
     this.scrollPosition = window.scrollY;
+    this.subscription.unsubscribe();
   }
 
   private initializeMap() {
