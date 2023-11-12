@@ -43,8 +43,8 @@ export class ProyectoLoteoComponent implements OnInit, OnDestroy {
     if (miVariable) {
       this.miVariableIndex.setMiVariable(miVariable);
     }
-    //!
     window.scrollTo(0, this.scrollPosition);
+    this.gallery()
   }
 
   ngOnDestroy() {

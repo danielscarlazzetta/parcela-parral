@@ -347,6 +347,7 @@ body {
     line-height: 1.2;
     font-weight: bold;
     color: white;
+    text-shadow: 4px 4px 8px rgba(25, 56, 29, 0.9);
 }
 
 .contenedor-card {
@@ -403,17 +404,22 @@ body {
     margin-top: 85px;
     position: relative;
     min-height: 100vh;
-    background: #ddd;
+    /* background: #ddd; */
 }
 
-.container-img h2 {
+/* .container-img h2 {
     margin-top: 85px;
     font-size: 40px;
     font-weight: normal;
     padding: 15px;
-    color: #2c5f15;
+    color: #ffffff;
     text-align: center;
     text-transform: capitalize;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+} */
+
+.container-img .contenedor-parrafo-loteos {
+    text-align: center;
 }
 
 .container-img .image-container {
@@ -431,6 +437,7 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
     overflow: hidden;
     cursor: pointer;
+    border-radius: 30px;
 }
 
 .container-img .image-container .image img {
