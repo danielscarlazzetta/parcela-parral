@@ -4,6 +4,7 @@ import { SharedServicesService } from '../../services/shared-services.service';
 import { LoteoDTO } from '../../interface/loteo.interface';
 import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { DatosService } from '../../services/data-service.service';
 
 
 
@@ -22,7 +23,11 @@ export class ProyectoLoteoComponent implements OnInit, OnDestroy {
 
 
 
-  constructor(private miVariableIndex: SharedServicesService, private router: Router) {
+  constructor(
+      private miVariableIndex: SharedServicesService,
+      private router: Router,
+      private datosServices : DatosService,
+  ) {
     this.subscription = this.router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
         this.scrollPosition = window.scrollY;
@@ -76,57 +81,11 @@ export class ProyectoLoteoComponent implements OnInit, OnDestroy {
 
   loteo: LoteoDTO[] = [];
 
-  private cargarDatosPorVariable(variable: string): void {
-    
-    const datos: Record<string, LoteoDTO[]> = {
-      'assets/json/el-bonito.json': [
-        {
-          nombre: 'El bonito',
-          precio: '$6.800.000',
-          distancia: '25 km de Parral',
-          sector: 'camino talhuenes',
-          rol: 'Propio',
-          propiedades: 'Saneadas',
-          transferencia: 'Lista para transferir',
-          pendiente: 'Pendiente suave',
-          divicion: 'Cuenta con estacas'
-        }
-      ],
-      'assets/json/santa-teresa.json': [
-        {
-          nombre: 'Santa Teresa',
-          precio: '$16.000.000',
-          distancia: '7 km de Retiro',
-          sector: 'Frente a tucapel',
-          rol: 'Propio',
-          propiedades: 'Saneadas',
-          transferencia: 'Lista para transferir',
-          pendiente: 'Sin pendiente',
-          divicion: 'Cuenta con estacas'
-        }
-      ],
-      'assets/json/talhuenes.json': [
-        {
-          nombre: 'Lomas de Machicura',
-          precio: '$10.000.000',
-          distancia: '23 km de Parral',
-          sector: 'Entre remulcado y camelia',
-          rol: 'Propio',
-          propiedades: 'Saneadas',
-          transferencia: 'Lista para transferir',
-          pendiente: 'Sin pendiente',
-          divicion: 'Cuenta con estacas'
-        }
-      ]
-    };
-
-    this.loteo = datos[variable] || [];
-  }
 
   private datosParcela() {
-    const variable = this.miVariableIndex.getMiVariable();
-    this.cargarDatosPorVariable(variable);
-    localStorage.getItem(variable);
+    const data = this.miVariableIndex.getMiVariable();
+    this.loteo = this.datosServices.cargarDatosPorVariable(data);
+    localStorage.getItem(data);
   }
 
 
