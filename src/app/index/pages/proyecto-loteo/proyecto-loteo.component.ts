@@ -20,7 +20,7 @@ export class ProyectoLoteoComponent implements OnInit, OnDestroy {
   private scrollPosition: number | any;
   private subscription: Subscription;
 
-  
+
 
   constructor(private miVariableIndex: SharedServicesService, private router: Router) {
     this.subscription = this.router.events.subscribe((event) => {
@@ -76,14 +76,10 @@ export class ProyectoLoteoComponent implements OnInit, OnDestroy {
 
   loteo: LoteoDTO[] = [];
 
-  private datosParcela() {
-
-    if (this.miVariableIndex.getMiVariable() === 'assets/json/el-bonito.json') {
-      const localstorageFunciona = localStorage.getItem(this.miVariableIndex.getMiVariable())
-      console.log('todo pasando 1');
-      console.log('caca ' +  localstorageFunciona)
-
-      this.loteo = [
+  private cargarDatosPorVariable(variable: string): void {
+    
+    const datos: Record<string, LoteoDTO[]> = {
+      'assets/json/el-bonito.json': [
         {
           nombre: 'El bonito',
           precio: '$6.800.000',
@@ -92,15 +88,11 @@ export class ProyectoLoteoComponent implements OnInit, OnDestroy {
           rol: 'Propio',
           propiedades: 'Saneadas',
           transferencia: 'Lista para transferir',
-          pendiente: 'Pendiente suabe',
+          pendiente: 'Pendiente suave',
           divicion: 'Cuenta con estacas'
         }
-      ];
-      
-    }
-    if (this.miVariableIndex.getMiVariable() === 'assets/json/santa-teresa.json') {
-      console.log('todo pasando 2');
-      this.loteo = [
+      ],
+      'assets/json/santa-teresa.json': [
         {
           nombre: 'Santa Teresa',
           precio: '$16.000.000',
@@ -112,12 +104,8 @@ export class ProyectoLoteoComponent implements OnInit, OnDestroy {
           pendiente: 'Sin pendiente',
           divicion: 'Cuenta con estacas'
         }
-      ];
-      localStorage.getItem(this.miVariableIndex.getMiVariable())
-    }
-    if (this.miVariableIndex.getMiVariable() === 'assets/json/talhuenes.json') {
-      console.log('todo pasando 3');
-      this.loteo = [
+      ],
+      'assets/json/talhuenes.json': [
         {
           nombre: 'Lomas de Machicura',
           precio: '$10.000.000',
@@ -129,9 +117,16 @@ export class ProyectoLoteoComponent implements OnInit, OnDestroy {
           pendiente: 'Sin pendiente',
           divicion: 'Cuenta con estacas'
         }
-      ];
-      localStorage.getItem(this.miVariableIndex.getMiVariable())
-    }
+      ]
+    };
+
+    this.loteo = datos[variable] || [];
+  }
+
+  private datosParcela() {
+    const variable = this.miVariableIndex.getMiVariable();
+    this.cargarDatosPorVariable(variable);
+    localStorage.getItem(variable);
   }
 
 
@@ -139,7 +134,7 @@ export class ProyectoLoteoComponent implements OnInit, OnDestroy {
     document.querySelectorAll('.image-container img').forEach(image => {
       image.addEventListener('click', () => {
         const popupImage = document.querySelector('.popup-image') as HTMLElement;
-        const popupImageImg : any = popupImage.querySelector('img') as HTMLImageElement;
+        const popupImageImg: any = popupImage.querySelector('img') as HTMLImageElement;
         popupImage.style.display = 'block';
         popupImageImg.src = image.getAttribute('src');
       });
@@ -150,11 +145,6 @@ export class ProyectoLoteoComponent implements OnInit, OnDestroy {
       const popupImage = document.querySelector('.popup-image') as HTMLElement;
       popupImage.style.display = 'none';
     });
-
-    // window.onload = function() {
-    //   window.scrollTo(0, 0);
-    // };
-    
   }
 
 }
