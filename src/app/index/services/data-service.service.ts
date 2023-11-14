@@ -5,6 +5,7 @@ import { LoteoDTO } from '../interface/loteo.interface';
   providedIn: 'root', // Esto hace que el servicio sea un singleton disponible en toda la aplicación
 })
 export class DatosService {
+  
   cargarDatosPorVariable(variable: string): LoteoDTO[] {
     const datos: Record<string, LoteoDTO[]> = {
       'assets/json/el-bonito.json': [

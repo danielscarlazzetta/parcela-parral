@@ -24,18 +24,7 @@ export class SharedServicesService {
     // Guardar el valor en localStorage
     localStorage.setItem('miVariable', nuevoValor);
   }
+
 }
 
-
-/*
-private miVariable: string = '';
-
-  getMiVariable() {
-    return this.miVariable;
-  }
-
-  setMiVariable(nuevoValor: string) {
-    this.miVariable = nuevoValor;
-  }
-  */
 

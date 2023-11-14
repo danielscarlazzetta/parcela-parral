@@ -5,6 +5,7 @@ import { LoteoDTO } from '../../interface/loteo.interface';
 import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { DatosService } from '../../services/data-service.service';
+import { ImageServiceService } from '../../services/image-service.service';
 
 
 
@@ -16,12 +17,8 @@ import { DatosService } from '../../services/data-service.service';
 export class ProyectoLoteoComponent implements OnInit, OnDestroy {
 
   private map: L.Map | any = null;
-
-  //!
   private scrollPosition: number | any;
   private subscription: Subscription;
-
-
 
   constructor(
       private miVariableIndex: SharedServicesService,
@@ -43,13 +40,13 @@ export class ProyectoLoteoComponent implements OnInit, OnDestroy {
     this.datosParcela();
     // Obtén el valor de miVariable desde localStorage
     const miVariable = localStorage.getItem('miVariable');
-    console.log(miVariable);
     // Si existe el valor en localStorage, actualiza miVariableIndex
     if (miVariable) {
       this.miVariableIndex.setMiVariable(miVariable);
     }
     window.scrollTo(0, this.scrollPosition);
-    this.gallery()
+    this.gallery();
+
   }
 
   ngOnDestroy() {
@@ -87,6 +84,7 @@ export class ProyectoLoteoComponent implements OnInit, OnDestroy {
     this.loteo = this.datosServices.cargarDatosPorVariable(data);
     localStorage.getItem(data);
   }
+
 
 
   gallery() {
