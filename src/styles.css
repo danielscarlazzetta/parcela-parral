@@ -490,3 +490,76 @@ body {
         width: 95%;
     }
 }
+
+.container-contrato{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: chartreuse;
+}
+
+.card-contacto{
+    width: 400px;
+    height: 400px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 40px;
+    box-shadow: 4px 4px 12px #112c07;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, .5);
+    background-size: cover;
+    background-position: center;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+    
+  }
+  
+  label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    transition: 0.3s ease all;
+  }
+  
+  input, textarea {
+    border: none;
+    border-bottom: 2px solid darkgreen;
+    outline: none;
+    padding: 5px;
+    width: 100%;
+    transition: 0.3s ease border-bottom;
+    background: none;
+    color: #fff;
+  }
+  
+  input:focus, textarea:focus {
+    border-bottom: 2px solid chartreuse;
+  }
+  
+  input:focus + label, textarea:focus + label, input:valid + label, textarea:valid + label {
+    top: -20px;
+    font-size: 14px;
+    color: chartreuse;
+  }
+
+  .button-contacto {
+    background: linear-gradient(to left, #4CAF50 50%, #2E7D32 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    transition: background-position 0.3s ease;
+  }
+  
+  .button-contacto:hover {
+    background-position: left bottom;
+    cursor: pointer;
+  }
