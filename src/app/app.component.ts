@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'parcela-parral';
+  isVisible: boolean = false;
+
+  toggleVisibility() {
+    this.isVisible = !this.isVisible;
+  }
 }

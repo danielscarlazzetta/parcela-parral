@@ -16,138 +16,90 @@ body {
     background-attachment: fixed;
 }
 
-.header {
+.navbar {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 15px 0;
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-    padding: 1.3rem 10%;
+    z-index: 1000;
+    color: #fff;
+  }
+  
+  .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 2;
-    /* z-index: 100%; */
-}
-
-.header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, .1);
-    backdrop-filter: blur(6px);
-    z-index: -1;
-}
-
-.header::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent);
-    transition: .5s;
-}
-
-.header:hover::after {
-    left: 100%;
-}
-
-.logo {
-    font-size: 3rem;
-    color: #fff;
+  }
+  
+  .logo {
+    font-size: 2.6em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    margin-left: 20px;
+  }
+  
+  .menu {
+    display: flex;
+  }
+  
+  .menu a {
     text-decoration: none;
-    font-weight: 700;
-}
-
-.navbar a {
-    font-size: 1.2rem;
     color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 2.5rem;
-}
-
-#check {
+    margin-left: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    font-size: 1.4em;
+    margin-right: 20px;
+  }
+  
+  .mobile-menu-icon {
     display: none;
-}
-
-.icons {
-    position: absolute;
-    right: 5%;
-    font-size: 2.8rem;
-    color: #fff;
+    flex-direction: column;
     cursor: pointer;
+  }
+  
+  .mobile-menu-icon span {
+    height: 5px;
+    width: 35px;
+    background: #333;
+    margin: 6px 0;
+  }
+  
+  .mobile-menu {
     display: none;
-}
-
-@media(max-width: 992px) {
-    .header {
-        padding: 1.3rem 5%;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mobile-menu.visible {
+    display: flex;
+  }
+  
+  .mobile-menu a {
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    .menu {
+      display: none;
     }
-}
-
-@media(max-width: 768px) {
-    .slide img {
-        position: center;
-
+  
+    .mobile-menu-icon {
+      display: flex;
+      margin-left: auto;
     }
-
-    .icons {
-        display: inline-flex;
+  
+    .mobile-menu {
+      display: flex;
     }
-
-    #check:checked~.icons #menu-icon {
-        display: none;
-    }
-
-    .icons #close-icon {
-        display: none;
-    }
-
-    #check:checked~.icons #close-icon {
-        display: block;
-    }
-
-    .navbar {
-        position: absolute;
-        z-index: 2;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        height: 0;
-        background: rgba(0, 0, 0, .6);
-        backdrop-filter: blur(6px);
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
-        overflow: hidden;
-        transition: .3s ease;
-    }
-
-    #check:checked~.navbar {
-        height: 17.7rem;
-    }
-
-    .navbar a {
-        display: block;
-        font-size: 2rem;
-        margin: 1.5rem 0;
-        text-align: center;
-        transform: translateY(-50px);
-        opacity: 0;
-        transition: .3s ease;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
-
-    #check:checked~.navbar a {
-        transform: translateY(0);
-        opacity: 1;
-        transition-delay: calc(.15s *var(--i));
-    }
-
-}
+  }
 
 
 /* ! Card Container */
@@ -243,13 +195,6 @@ body {
     }
 }
 
-.titulo {
-    font-size: 6.2rem;
-    text-align: center;
-    font-weight: 700;
-    color: #fff;
-}
-
 .container-text {
     /* height: 100vh; */
     background-color: none;
@@ -340,14 +285,15 @@ body {
     z-index: 1;
 }
 
-.contenedor-parrafo-loteos {
-    font-size: 60px;
+.titulo {
+    text-align: center;
+    font-size: 3.7rem;
     margin: 20px;
     margin-top: 60px;
     line-height: 1.2;
     font-weight: bold;
     color: white;
-    text-shadow: 4px 4px 8px rgba(25, 56, 29, 0.9);
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8);    
 }
 
 .contenedor-card {
@@ -407,18 +353,7 @@ body {
     /* background: #ddd; */
 }
 
-/* .container-img h2 {
-    margin-top: 85px;
-    font-size: 40px;
-    font-weight: normal;
-    padding: 15px;
-    color: #ffffff;
-    text-align: center;
-    text-transform: capitalize;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-} */
-
-.container-img .contenedor-parrafo-loteos {
+.container-img .titulo {
     text-align: center;
 }
 
@@ -563,3 +498,5 @@ body {
     background-position: left bottom;
     cursor: pointer;
   }
+
+

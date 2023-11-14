@@ -1,4 +1,4 @@
-<header class="header">
+<!-- <header class="header">
     <a href="#" class="logo">Parcelas Parral</a>
     <input type="checkbox" id="check">
 
@@ -12,6 +12,32 @@
         <a routerLink="/index/contacto" style="--i:1">Contacto</a>
         <a routerLink="/index/quienessomos" src="quienessomos" style="--i:2">Quienes somos</a>
     </nav>
-</header>
+</header> -->
+
+
+
+<div class="navbar">
+    <div class="container">
+        <div class="logo">Parcelas Parral</div>
+        <div class="menu">
+            <a routerLink="/index">Inicio</a>
+            <a routerLink="/index/contacto">Contacto</a>
+            <a routerLink="/index/quienessomos">Quiénes Somos</a>
+        </div>
+        <div class="mobile-menu-icon" (click)="toggleVisibility()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div *ngIf="isVisible">
+            <div class="mobile-menu">
+                <a routerLink="/index/index">Inicio</a>
+                <a routerLink="/index/contacto">Contacto</a>
+                <a routerLink="/index/quienessomos">Quiénes Somos</a>
+            </div>
+        </div>
+
+    </div>
+</div>
 
 <router-outlet></router-outlet>
